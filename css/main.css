@@ -1,0 +1,138 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+#wrapper{
+    display:grid;
+    grid-template-areas:
+        "header header header"
+        " . description . "
+        " . screenshots . "
+        ". game ."
+        "footer footer footer";
+    grid-template-rows: 100px 50vh 85vh 85vh 100px;
+    grid-template-columns: 15% 1fr 15%;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    height: 100vh;
+    color:#eee;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+header, article, footer{
+    background-color: #000;
+}
+
+header{
+    grid-area: header;
+}
+.description{
+    grid-area: description;
+}
+.screenshots{
+    grid-area: screenshots;
+}
+#game {
+    grid-area: game;
+}
+footer{
+    grid-area: footer;
+}
+a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color:#eee;
+}
+h1{
+    padding:0.3em;
+}
+header{
+    padding:30px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display:inline-flex;
+    list-style: none;
+}
+li{
+    padding:0.3em 1em;
+}
+li:hover{
+    background-color: #9b9da0;
+}
+img{
+    width:100px;
+    height: 100px;
+    display:block;
+    margin: 20px auto;
+}
+.description{
+    display:flex;
+}
+button{
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    outline: none;
+}
+button a{
+    color:#000;
+}
+button:hover{
+    cursor:pointer;
+    
+}
+section{
+    border: 1px solid white;
+    width: 100%;
+    
+}
+.screenshots{
+    display:grid;
+    grid-template-areas:
+        "upper-left upper-right"
+        "lower-left lower-right";
+    grid-template-rows:50% 50%;
+    grid-template-columns:50% 50%;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+}
+.upper-right-screen{
+    grid-area: upper-right;
+}
+.upper-left-screen{
+    grid-area: upper-left;
+}
+.lower-right-screen{
+    grid-area: lower-right;
+}
+.lower-left-screen{
+    grid-area: lower-left;
+}
+.image-screen {
+    width: 200px;
+    height: 150px;
+}
+p{
+    padding: 10px;
+}
+.description button{
+    display: block;
+    margin:5px auto;
+}
+.screenshots button{
+    display:block;
+    margin:100px auto;
+}
+footer p{
+    text-align: center;
+    margin-top: 30px;
+}
